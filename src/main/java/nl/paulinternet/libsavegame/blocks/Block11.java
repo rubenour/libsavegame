@@ -8,7 +8,7 @@ public class Block11 implements Link {
     @Override
     public void load(SavegameData io) throws FileFormatException {
         int p = 0;
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < 10; i++) {
             vars.gangWeapon.get(p++).setValue(io.readInt(11, i * 0x10 + 0x4));
             vars.gangWeapon.get(p++).setValue(io.readInt(11, i * 0x10 + 0x8));
             vars.gangWeapon.get(p++).setValue(io.readInt(11, i * 0x10 + 0xc));
@@ -18,7 +18,7 @@ public class Block11 implements Link {
     @Override
     public void save(SavegameData io) {
         int p = 0;
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < 10; i++) {
             io.writeInt(11, i * 0x10 + 0x4, vars.gangWeapon.get(p++).getValue());
             io.writeInt(11, i * 0x10 + 0x8, vars.gangWeapon.get(p++).getValue());
             io.writeInt(11, i * 0x10 + 0xc, vars.gangWeapon.get(p++).getValue());
